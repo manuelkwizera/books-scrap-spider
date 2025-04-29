@@ -66,6 +66,10 @@ ROBOTSTXT_OBEY = True
 #    "books.pipelines.BooksPipeline": 300,
 #}
 
+ITEM_PIPELINES = {
+   "books.pipelines.MongoPipeline": 300,
+}
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
@@ -102,5 +106,10 @@ FEEDS = {
         'overwrite': True
     },
 }
+
+# Connect to Mongo Database
+MONGO_URI = "mongodb://localhost:27017"
+MONGO_DATABASE = "books_db"
+
 
 
